@@ -1,0 +1,27 @@
+  
+name: 'Docker Image Retag with CURL '
+author: 'Z-M-Huang'
+branding:
+  icon: 'git-pull-request'
+  color: 'gray-dark'
+description: 'Retag docker image using CURL. Supports for multi-arch images'
+inputs:
+  repo:
+    description: 'Repository name like username/repo'
+    required: true
+  old_tag:
+    description: 'Existing tag for the image'
+    required: true
+  new_tag:
+    description: 'New tag for image'
+    required: true
+  username:
+    description: 'Registry Username'
+    required: true
+  password:
+    description: 'Registry Password'
+    required: true
+outputs:
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
